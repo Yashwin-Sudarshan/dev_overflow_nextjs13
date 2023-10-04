@@ -74,7 +74,7 @@ export async function POST(req: Request) {
     const { id, email_addresses, image_url, username, first_name, last_name } =
       evt.data;
 
-    // Create a new user in your database
+    // Update user in your database
     const mongoUser = await updateUser({
       clerkId: id,
       updateData: {
@@ -92,6 +92,7 @@ export async function POST(req: Request) {
   if (eventType === "user.deleted") {
     const { id } = evt.data;
 
+    // Delete user in your database
     const deletedUser = await deleteUser({
       clerkId: id!,
     });
