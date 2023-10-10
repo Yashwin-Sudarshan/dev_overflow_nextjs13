@@ -59,3 +59,14 @@ export const formatNumberWithExtension = (inputNumber: number): string => {
 
   return formattedNumber + (divisor === 1 ? "" : divisor === 1000 ? "K" : "M");
 };
+
+export const getJoinedDate = (date: Date): string => {
+  // Get the month and year from the Date object
+  const month = date.toLocaleString("default", { month: "long" });
+  const year = date.getFullYear();
+
+  // Combine them into a joined date string
+  const joinedDate = `${month} ${year}`;
+
+  return joinedDate;
+};
