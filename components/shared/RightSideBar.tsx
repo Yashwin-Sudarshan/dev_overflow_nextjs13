@@ -5,14 +5,6 @@ import RenderTag from "./RenderTag";
 import { getHotQuestions } from "@/lib/actions/question.action";
 import { getTopPopulartags } from "@/lib/actions/tag.actions";
 
-const popularTags = [
-  { _id: "1", name: "javascript", totalQuestions: 5 },
-  { _id: "2", name: "react", totalQuestions: 5 },
-  { _id: "3", name: "next", totalQuestions: 5 },
-  { _id: "4", name: "vue", totalQuestions: 2 },
-  { _id: "5", name: "redux", totalQuestions: 10 },
-];
-
 const RightSideBar = async () => {
   const hotQuestions = await getHotQuestions();
   const popularTags = await getTopPopulartags();
