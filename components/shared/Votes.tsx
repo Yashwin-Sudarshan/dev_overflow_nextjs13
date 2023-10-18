@@ -46,7 +46,7 @@ const Votes = ({
 
     return toast({
       title: `Question ${
-        !hasSaved ? "saved into" : "removed from"
+        !hasSaved ? "Saved in" : "Removed from"
       } your collection`,
       variant: !hasSaved ? "default" : "destructive",
     });
@@ -135,10 +135,7 @@ const Votes = ({
             onClick={() => handleVote("upvote")}
           />
 
-          <div
-            className="flex-center background-light700_dark400 min-w-[18px]
-          rounded-sm p-1"
-          >
+          <div className="flex-center background-light700_dark400 min-w-[18px] rounded-sm p-1">
             <p className="subtle-medium text-dark400_light900">
               {formatNumberWithExtension(upvotes)}
             </p>
@@ -159,10 +156,7 @@ const Votes = ({
             onClick={() => handleVote("downvote")}
           />
 
-          <div
-            className="flex-center background-light700_dark400 min-w-[18px]
-          rounded-sm p-1"
-          >
+          <div className="flex-center background-light700_dark400 min-w-[18px] rounded-sm p-1">
             <p className="subtle-medium text-dark400_light900">
               {formatNumberWithExtension(downvotes)}
             </p>
